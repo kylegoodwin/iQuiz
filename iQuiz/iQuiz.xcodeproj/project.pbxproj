@@ -14,6 +14,8 @@
 		E3288AC62217B9A900CABBFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3288AC42217B9A900CABBFA /* LaunchScreen.storyboard */; };
 		E3288AD12217B9A900CABBFA /* iQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3288AD02217B9A900CABBFA /* iQuizTests.swift */; };
 		E3288ADC2217B9A900CABBFA /* iQuizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3288ADB2217B9A900CABBFA /* iQuizUITests.swift */; };
+		E3288AEA2218AEBE00CABBFA /* iQuizCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3288AE92218AEBE00CABBFA /* iQuizCellTableViewCell.swift */; };
+		E3288AEC2218B08B00CABBFA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3288AEB2218B08B00CABBFA /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		E3288AD72217B9A900CABBFA /* iQuizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iQuizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3288ADB2217B9A900CABBFA /* iQuizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iQuizUITests.swift; sourceTree = "<group>"; };
 		E3288ADD2217B9A900CABBFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3288AE92218AEBE00CABBFA /* iQuizCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iQuizCellTableViewCell.swift; sourceTree = "<group>"; };
+		E3288AEB2218B08B00CABBFA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				E3288ABB2217B9A800CABBFA /* AppDelegate.swift */,
 				E3288ABD2217B9A800CABBFA /* ViewController.swift */,
 				E3288ABF2217B9A800CABBFA /* Main.storyboard */,
+				E3288AEB2218B08B00CABBFA /* MainViewController.swift */,
+				E3288AE92218AEBE00CABBFA /* iQuizCellTableViewCell.swift */,
 				E3288AC22217B9A900CABBFA /* Assets.xcassets */,
 				E3288AC42217B9A900CABBFA /* LaunchScreen.storyboard */,
 				E3288AC72217B9A900CABBFA /* Info.plist */,
@@ -258,6 +264,8 @@
 			files = (
 				E3288ABE2217B9A800CABBFA /* ViewController.swift in Sources */,
 				E3288ABC2217B9A800CABBFA /* AppDelegate.swift in Sources */,
+				E3288AEA2218AEBE00CABBFA /* iQuizCellTableViewCell.swift in Sources */,
+				E3288AEC2218B08B00CABBFA /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
