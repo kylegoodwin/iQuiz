@@ -12,7 +12,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    var quizes: [String] = []
+    var quizes: [Quiz] = []
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,13 +22,37 @@ class MainViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
     }
     
-    func createTitles() -> [String]{
+    @IBAction func settingsPress(_ sender: Any) {
+        let alert = UIAlertController(title: "Settings", message: "This is where settings go.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: nil))
+        
+        self.present(alert,animated: true,completion: nil)
+        
+        
+    }
+    
+    func createTitles() -> [Quiz]{
+        
+        var quizes : [Quiz] = []
+        
+        let tempDescs = ["A quiz about Mathematics", "A quiz about Super Heros", "A quiz about Science"]
         
         let tempTitles = ["Mathematics","Marvel Super Heros","Science"]
-        return tempTitles
         
+        var images = [#imageLiteral(resourceName: "marvel.png"),#imageLiteral(resourceName: "math.jpg"),#imageLiteral(resourceName: "sci.png")]
+        
+        var count = 0
+        for _ in tempDescs{
+            let quiz = Quiz(title: tempTitles[count], desc: tempDescs[count], image: images[count])
+            count += 1
+            quizes.append(quiz)
+        }
+        return quizes
+
     }
     
 }
@@ -40,10 +64,10 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let title = quizes[indexPath.row]
+        let quiz = quizes[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuizCell") as! iQuizCellTableViewCell
         
-        cell.setTitle(title: title)
+        cell.setCell(quiz: quiz)
         
         return cell
         
