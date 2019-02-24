@@ -14,11 +14,13 @@ class iQuizCellTableViewCell: UITableViewCell {
     @IBOutlet weak var quizLabel: UILabel!
     @IBOutlet weak var quizImage: UIImageView!
     @IBOutlet weak var quizDescription: UILabel!
+    var fullQuiz: Quiz?
     
     func setCell(quiz: Quiz){
-        quizLabel.text = quiz.Title
-        quizImage.image = quiz.Image
-        quizDescription.text = quiz.Description
+        quizLabel.text = quiz.title
+        quizImage.image = quiz.image
+        quizDescription.text = quiz.desc
+        fullQuiz = quiz
         
     }
 }

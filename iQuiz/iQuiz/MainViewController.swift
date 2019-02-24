@@ -18,13 +18,33 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        quizes = createTitles()
+        
+        QuizRepository.getAll(completion: { (newQs: [Quiz]) in
+            self.quizes = newQs
+            print("Hell ya son")
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+            
+        })
+        
         
         tableView.delegate = self
         tableView.dataSource = self
         
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        
+        if let thing = sender as? iQuizCellTableViewCell{
+            let destVC = segue.destination as! QuestionsViewController
+            destVC.quiz = thing.fullQuiz
+        }
+        
+    }
+    
     
     @IBAction func settingsPress(_ sender: Any) {
         let alert = UIAlertController(title: "Settings", message: "This is where settings go.", preferredStyle: .alert)
@@ -34,26 +54,7 @@ class MainViewController: UIViewController {
         
         
     }
-    
-    func createTitles() -> [Quiz]{
-        
-        var quizes : [Quiz] = []
-        
-        let tempDescs = ["A quiz about Mathematics", "A quiz about Super Heros", "A quiz about Science"]
-        
-        let tempTitles = ["Mathematics","Marvel Super Heros","Science"]
-        
-        var images = [#imageLiteral(resourceName: "marvel.png"),#imageLiteral(resourceName: "math.jpg"),#imageLiteral(resourceName: "sci.png")]
-        
-        var count = 0
-        for _ in tempDescs{
-            let quiz = Quiz(title: tempTitles[count], desc: tempDescs[count], image: images[count])
-            count += 1
-            quizes.append(quiz)
-        }
-        return quizes
 
-    }
     
 }
 

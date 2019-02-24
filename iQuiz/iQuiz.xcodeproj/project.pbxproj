@@ -17,9 +17,12 @@
 		E3288AEA2218AEBE00CABBFA /* iQuizCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3288AE92218AEBE00CABBFA /* iQuizCellTableViewCell.swift */; };
 		E3288AEC2218B08B00CABBFA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3288AEB2218B08B00CABBFA /* MainViewController.swift */; };
 		E3288AEE2218BC1500CABBFA /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3288AED2218BC1500CABBFA /* Quiz.swift */; };
+		E3A841832221FFE3003D6FAC /* QuizRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A841822221FFE3003D6FAC /* QuizRepository.swift */; };
+		E3A8418722235B91003D6FAC /* QuizAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A8418622235B91003D6FAC /* QuizAnswerCell.swift */; };
 		E3C9D7B8221A707600BF6656 /* math.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E3C9D7B5221A707600BF6656 /* math.jpg */; };
 		E3C9D7B9221A707600BF6656 /* marvel.png in Resources */ = {isa = PBXBuildFile; fileRef = E3C9D7B6221A707600BF6656 /* marvel.png */; };
 		E3C9D7BA221A707600BF6656 /* sci.png in Resources */ = {isa = PBXBuildFile; fileRef = E3C9D7B7221A707600BF6656 /* sci.png */; };
+		E3C9D7BC221A832400BF6656 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C9D7BB221A832400BF6656 /* QuestionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +59,12 @@
 		E3288AE92218AEBE00CABBFA /* iQuizCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iQuizCellTableViewCell.swift; sourceTree = "<group>"; };
 		E3288AEB2218B08B00CABBFA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E3288AED2218BC1500CABBFA /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		E3A841822221FFE3003D6FAC /* QuizRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepository.swift; sourceTree = "<group>"; };
+		E3A8418622235B91003D6FAC /* QuizAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAnswerCell.swift; sourceTree = "<group>"; };
 		E3C9D7B5221A707600BF6656 /* math.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = math.jpg; sourceTree = "<group>"; };
 		E3C9D7B6221A707600BF6656 /* marvel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marvel.png; sourceTree = "<group>"; };
 		E3C9D7B7221A707600BF6656 /* sci.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sci.png; sourceTree = "<group>"; };
+		E3C9D7BB221A832400BF6656 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +119,11 @@
 				E3288ABB2217B9A800CABBFA /* AppDelegate.swift */,
 				E3288ABD2217B9A800CABBFA /* ViewController.swift */,
 				E3288ABF2217B9A800CABBFA /* Main.storyboard */,
+				E3A841822221FFE3003D6FAC /* QuizRepository.swift */,
 				E3288AEB2218B08B00CABBFA /* MainViewController.swift */,
+				E3C9D7BB221A832400BF6656 /* QuestionsViewController.swift */,
 				E3288AE92218AEBE00CABBFA /* iQuizCellTableViewCell.swift */,
+				E3A8418622235B91003D6FAC /* QuizAnswerCell.swift */,
 				E3288AED2218BC1500CABBFA /* Quiz.swift */,
 				E3288AC22217B9A900CABBFA /* Assets.xcassets */,
 				E3288AC42217B9A900CABBFA /* LaunchScreen.storyboard */,
@@ -285,8 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A8418722235B91003D6FAC /* QuizAnswerCell.swift in Sources */,
 				E3288ABE2217B9A800CABBFA /* ViewController.swift in Sources */,
+				E3A841832221FFE3003D6FAC /* QuizRepository.swift in Sources */,
 				E3288AEE2218BC1500CABBFA /* Quiz.swift in Sources */,
+				E3C9D7BC221A832400BF6656 /* QuestionsViewController.swift in Sources */,
 				E3288ABC2217B9A800CABBFA /* AppDelegate.swift in Sources */,
 				E3288AEA2218AEBE00CABBFA /* iQuizCellTableViewCell.swift in Sources */,
 				E3288AEC2218B08B00CABBFA /* MainViewController.swift in Sources */,
