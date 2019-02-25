@@ -57,6 +57,18 @@ class Quiz: Codable {
     
 }
 
+//Quizes class to store quizzes locally
+class Quizzes: Cachable, Codable {
+    
+    var fileName: String = "cachedQuizzes"
+    var quizes: [Quiz]
+    
+    init(quizList: [Quiz]) {
+        quizes = quizList
+    }
+
+}
+
 /*
 class Quiz{
     var Title : String
