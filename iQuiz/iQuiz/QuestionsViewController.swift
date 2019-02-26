@@ -13,12 +13,13 @@ class QuestionsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var questionLabel: UILabel!
     var quiz: Quiz?
+    var questionCount: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        questionLabel.text = quiz!.title
+        questionLabel.text = quiz!.questions[questionCount ?? 0].text
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -28,32 +29,28 @@ class QuestionsViewController: UIViewController {
 
     
      @IBAction func nextTouch(_ sender: Any) {
-        print("fuck")
-        
-     }
-    
-    
-    
-    /*
-     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+      
+        print(quiz?.questions.count)
+        if quiz!.questions.count > questionCount! + 1{
+            questionCount! += 1
+            questionLabel.text = quiz!.questions[questionCount!].text
+            tableView.reloadData()
+        }else{
+            self.performSegue(withIdentifier: "finish", sender: nil)
+        }
     }
-    */
-
+     
+    
 }
 
 extension QuestionsViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return quiz!.questions[0].answers.count
+        return quiz!.questions[questionCount ?? 0].answers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let question = quiz!.questions[0].answers[indexPath.row]
+        let question = quiz!.questions[questionCount ?? 0 ].answers[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "AnswerCell") as! QuizAnswerCell
         
         cell.setCell(question: question)
