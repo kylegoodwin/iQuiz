@@ -59,13 +59,14 @@ class QuestionsViewController: UIViewController {
         if let button = sender as? UIButton{
             
             if button.tag == 2{
-                print("Buttontagwas2")
             let destVC = segue.destination as! AnswerViewController
             destVC.question = quiz!.questions[questionCount!].text
             destVC.rightAnswer = quiz!.questions[questionCount!].answer
             destVC.givenAnswer = selectedAnswer!
             destVC.currentScore = currentScore!
             destVC.rightAnswer = correctAnswer!
+            destVC.quiz = quiz!
+            destVC.questionNum = questionCount!
             }
             
         }

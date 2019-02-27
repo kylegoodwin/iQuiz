@@ -208,10 +208,10 @@
             </objects>
             <point key="canvasLocation" x="1269.5999999999999" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Final View Controller-->
         <scene sceneID="uAR-AO-5ds">
             <objects>
-                <viewController id="KQm-AL-3KW" sceneMemberID="viewController">
+                <viewController id="KQm-AL-3KW" customClass="FinalViewController" customModule="iQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xrh-nG-3RF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,7 +219,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="4NS-31-Wi3">
                                 <rect key="frame" x="0.0" y="209.5" width="375" height="248.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finished Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19N-ld-PXt">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finished Quiz - You Got:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19N-ld-PXt">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -239,6 +239,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="21r-Nc-1lu">
                                 <rect key="frame" x="10" y="30" width="365" height="30"/>
                                 <state key="normal" title="&lt; Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="XBr-5n-Y1T"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -252,6 +255,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yfN-jD-2Wz"/>
                     </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="Dqd-Vk-C84" id="eL3-vH-AiO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMl-0d-T2q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -333,6 +339,7 @@
                         <outlet property="questionLabel" destination="UUz-dI-rIt" id="UhK-ug-pRm"/>
                         <outlet property="wereTheyRightLabel" destination="BMN-dP-Kmz" id="qhB-IN-KV9"/>
                         <segue destination="KQm-AL-3KW" kind="show" identifier="sendToEnd" id="vnQ-88-BR2"/>
+                        <segue destination="V1P-8k-CMw" kind="show" identifier="sendToQuestion" id="xDF-fZ-UFR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fO1-NB-Sgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -341,6 +348,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wPy-C5-tJY"/>
+        <segue reference="xDF-fZ-UFR"/>
+        <segue reference="XBr-5n-Y1T"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,6 +10,18 @@ import Foundation
 import UIKit
 
 class FinalViewController: UIViewController {
-
+    
+    var score: String?
+    var outOf: String?
+    
+    
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        scoreLabel.text = (score! + "/" + outOf!)
+    }
+    
 
 }

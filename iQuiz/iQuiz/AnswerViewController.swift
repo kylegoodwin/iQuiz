@@ -22,6 +22,7 @@ class AnswerViewController: UIViewController {
     var givenAnswer: String?
     var currentScore: Int?
     var question: String?
+    var wereTheyRight: Bool?
     
     
     override func viewDidLoad() {
@@ -30,8 +31,8 @@ class AnswerViewController: UIViewController {
         questionLabel.text = question
         correctLabel.text =  rightAnswer
         
-        let wereTheyRight = ( rightAnswer == givenAnswer)
-        if( wereTheyRight){
+        wereTheyRight = ( rightAnswer == givenAnswer)
+        if( wereTheyRight!){
             wereTheyRightLabel.text = "You were right"
         }else{
             wereTheyRightLabel.text = "You were wrong"
@@ -41,7 +42,38 @@ class AnswerViewController: UIViewController {
     
     
     @IBAction func nextButton(_ sender: Any) {
-       
+        
+        if (questionNum! + 1) < quiz!.questions.count{
+            performSegue(withIdentifier: "sendToQuestion", sender: sender)
+        }else{
+            performSegue(withIdentifier: "sendToEnd", sender: sender)
+        }
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "sendToQuestion"{
+            
+            var newScore = currentScore
+            
+            if( wereTheyRight!){
+                newScore = newScore! + 1
+            }
+            
+            let destVC = segue.destination as! QuestionsViewController
+            destVC.quiz = quiz
+            destVC.questionCount = questionNum! + 1
+            destVC.currentScore = newScore
+        }else if segue.identifier == "sendToEnd" {
+            
+            let destVC = segue.destination as! FinalViewController
+            destVC.score = String(currentScore!)
+            destVC.outOf = String(quiz!.questions.count)
+            
+        }
+        
+        
         
         
     }
