@@ -72,6 +72,7 @@ class MainViewController: UIViewController {
             let destVC = segue.destination as! QuestionsViewController
             destVC.quiz = thing.fullQuiz
             destVC.questionCount = 0
+            destVC.currentScore = 0
         }
         
     }

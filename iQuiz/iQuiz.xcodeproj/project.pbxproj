@@ -23,6 +23,8 @@
 		E3A841902223CD0E003D6FAC /* Cacher in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A841882223C740003D6FAC /* Cacher */; };
 		E3A841922223CD4A003D6FAC /* Cacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A841912223CD4A003D6FAC /* Cacher.swift */; };
 		E3A841942223CEBB003D6FAC /* CheckInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A841932223CEBB003D6FAC /* CheckInternet.swift */; };
+		E3C70C672225F2D400DA90B4 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C70C662225F2D400DA90B4 /* AnswerViewController.swift */; };
+		E3C70C692225F5F300DA90B4 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C70C682225F5F300DA90B4 /* FinalViewController.swift */; };
 		E3C9D7B8221A707600BF6656 /* math.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E3C9D7B5221A707600BF6656 /* math.jpg */; };
 		E3C9D7B9221A707600BF6656 /* marvel.png in Resources */ = {isa = PBXBuildFile; fileRef = E3C9D7B6221A707600BF6656 /* marvel.png */; };
 		E3C9D7BA221A707600BF6656 /* sci.png in Resources */ = {isa = PBXBuildFile; fileRef = E3C9D7B7221A707600BF6656 /* sci.png */; };
@@ -68,6 +70,8 @@
 		E3A841882223C740003D6FAC /* Cacher */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Cacher; sourceTree = "<group>"; };
 		E3A841912223CD4A003D6FAC /* Cacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cacher.swift; sourceTree = "<group>"; };
 		E3A841932223CEBB003D6FAC /* CheckInternet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInternet.swift; sourceTree = "<group>"; };
+		E3C70C662225F2D400DA90B4 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		E3C70C682225F5F300DA90B4 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		E3C9D7B5221A707600BF6656 /* math.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = math.jpg; sourceTree = "<group>"; };
 		E3C9D7B6221A707600BF6656 /* marvel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = marvel.png; sourceTree = "<group>"; };
 		E3C9D7B7221A707600BF6656 /* sci.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sci.png; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 				E3288ABB2217B9A800CABBFA /* AppDelegate.swift */,
 				E3288ABD2217B9A800CABBFA /* ViewController.swift */,
 				E3288ABF2217B9A800CABBFA /* Main.storyboard */,
+				E3C70C682225F5F300DA90B4 /* FinalViewController.swift */,
+				E3C70C662225F2D400DA90B4 /* AnswerViewController.swift */,
 				E3A841882223C740003D6FAC /* Cacher */,
 				E3A841822221FFE3003D6FAC /* QuizRepository.swift */,
 				E3A841912223CD4A003D6FAC /* Cacher.swift */,
@@ -315,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A8418722235B91003D6FAC /* QuizAnswerCell.swift in Sources */,
+				E3C70C692225F5F300DA90B4 /* FinalViewController.swift in Sources */,
 				E3288ABE2217B9A800CABBFA /* ViewController.swift in Sources */,
 				E3A841832221FFE3003D6FAC /* QuizRepository.swift in Sources */,
 				E3288AEE2218BC1500CABBFA /* Quiz.swift in Sources */,
@@ -324,6 +331,7 @@
 				E3288AEA2218AEBE00CABBFA /* iQuizCellTableViewCell.swift in Sources */,
 				E3288AEC2218B08B00CABBFA /* MainViewController.swift in Sources */,
 				E3A841942223CEBB003D6FAC /* CheckInternet.swift in Sources */,
+				E3C70C672225F2D400DA90B4 /* AnswerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
