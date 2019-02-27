@@ -55,16 +55,10 @@ class AnswerViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "sendToQuestion"{
             
-            var newScore = currentScore
-            
-            if( wereTheyRight!){
-                newScore = newScore! + 1
-            }
-            
             let destVC = segue.destination as! QuestionsViewController
             destVC.quiz = quiz
             destVC.questionCount = questionNum! + 1
-            destVC.currentScore = newScore
+            destVC.currentScore = currentScore
         }else if segue.identifier == "sendToEnd" {
             
             let destVC = segue.destination as! FinalViewController

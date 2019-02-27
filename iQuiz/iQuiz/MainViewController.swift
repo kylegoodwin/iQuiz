@@ -89,8 +89,11 @@ class MainViewController: UIViewController {
                     return
             }
             
-            QuizRepository.setJSON(json: textFields[0].text!)
+
+                QuizRepository.setJSON(json: textFields[0].text!)
                 QuizRepository.getAll(completion: { (newQuestions: [Quiz]) in
+                    
+                    if( newQuestions.count != 0){
                     
                     self.cacher.persist(item: Quizzes(quizList: newQuestions)) { url, error in
                         if let error = error {
@@ -99,13 +102,22 @@ class MainViewController: UIViewController {
                             print("Text persisted in \(String(describing: url))")
                         }
                     }
+                    
+                    
                     //self.quizzes = newQuestions
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
+                    }else{
+                        let alertController = UIAlertController(title: "Error", message:
+                            "URL didn't link to valid JSON", preferredStyle: .alert)
+                        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+                        
+                        self.present(alertController, animated: true, completion: nil)
+                    }
+                    
                 })
-            
-                print("reloaded")
+          
             
         }
         

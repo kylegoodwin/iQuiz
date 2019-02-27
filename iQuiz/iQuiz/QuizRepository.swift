@@ -31,7 +31,6 @@ class QuizRepository{
     class func getAll(completion:@escaping ([Quiz])->()){
         
         guard let url = URL(string: jsonURL) else {return}
-        print("here1")
         
         let task = URLSession.shared.dataTask(with: url){
         
@@ -39,6 +38,8 @@ class QuizRepository{
 
             if error != nil{
                 print(error!.localizedDescription)
+                completion([])
+               
             }
             
             guard let data = data else {return}
@@ -55,6 +56,7 @@ class QuizRepository{
                 
             } catch let jsonError{
                 print(jsonError)
+                completion([])
             }
             
             

@@ -30,9 +30,11 @@ class QuestionsViewController: UIViewController {
         nextButton.isEnabled = false
         nextButton.setTitle("Please Select an Answer", for: .normal)
         
+
         let correct:Int? = Int(quiz!.questions[questionCount!].answer)
         let correctString = quiz!.questions[questionCount!].answers[correct!-1]
         correctAnswer = correctString
+
         
     }
     
@@ -61,9 +63,12 @@ class QuestionsViewController: UIViewController {
             if button.tag == 2{
             let destVC = segue.destination as! AnswerViewController
             destVC.question = quiz!.questions[questionCount!].text
-            destVC.rightAnswer = quiz!.questions[questionCount!].answer
             destVC.givenAnswer = selectedAnswer!
-            destVC.currentScore = currentScore!
+                if( correctAnswer! != selectedAnswer!){
+                    destVC.currentScore = currentScore!
+                }else{
+                    destVC.currentScore = currentScore! + 1
+                }
             destVC.rightAnswer = correctAnswer!
             destVC.quiz = quiz!
             destVC.questionNum = questionCount!
